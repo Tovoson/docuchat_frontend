@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Création d'une instance Axios configurée
 const apiClient = axios.create({
-  baseURL: "https://docuchatbackend-production.up.railway.app",
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000",
   headers: {
     "Content-Type": "application/json",
   },
